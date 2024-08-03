@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import { SafeAreaView, StyleSheet, Text, View, Image } from 'react-native';
 
 function App(): React.JSX.Element {
