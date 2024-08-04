@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { SafeAreaView, StyleSheet, Text, View, Image } from 'react-native';
+import { SafeAreaView, StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
 
 function App(): React.JSX.Element {
   return (
@@ -12,10 +12,9 @@ function App(): React.JSX.Element {
         <Text style={styles.text}>Good morning Lucas !</Text>
       </View>
       <View style={styles.square}>
-        <Text style={styles.text1}>
-          Ma progression
-        </Text>
-
+        <TouchableOpacity style={styles.button1}>
+          <Text style={styles.textbutton1}>Voir mes tâches</Text>
+        </TouchableOpacity>
       </View>
     </SafeAreaView>
   );
@@ -46,15 +45,27 @@ const styles = StyleSheet.create({
   },
   square: {
     backgroundColor: '#0FC2FB',
-    width: 300,
-    height: 300,
+    width: 330,
+    height: 100,
     borderRadius: 15,
-    left: 39,
-    bottom: 100,
+    left: 22,
+    bottom: 430,
+
   },
-  text1: {
-    color : 'white',
+  button1: {
+    backgroundColor: 'white',
+    borderRadius: 15,
+    height: 35,
+    width: 130,
+    justifyContent: 'center',
+    left: 178,
+    top: 34,
+
+  },
+  textbutton1: {
     fontWeight : 'bold',
+    color : 'black',
+    left: 10,
   }
 });
 
