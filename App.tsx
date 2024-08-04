@@ -1,5 +1,7 @@
 import * as React from 'react';
-import { SafeAreaView, StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
+import { SafeAreaView, StyleSheet, Text, View, Image, TouchableOpacity, Dimensions } from 'react-native';
+
+const { width, height } = Dimensions.get('window'); // Pour connaitre la largeur de l'ecran et donc responsive
 
 function App(): React.JSX.Element {
   return (
@@ -10,6 +12,7 @@ function App(): React.JSX.Element {
           style={styles.image}
         />
         <Text style={styles.text}>Good morning Lucas !</Text>
+        <Text style={styles.textdebut}>Ma progression</Text>
       </View>
       <View style={styles.square}>
         <TouchableOpacity style={styles.button1}>
@@ -31,10 +34,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   text: {
-    fontSize: 15,
+    fontSize: 20,
     fontWeight: 'bold',
     width: '93%',
     height: '93%',
+    marginLeft: 6,
+    marginVertical: 0,
   },
   image: {
     borderRadius : 60,
@@ -42,13 +47,23 @@ const styles = StyleSheet.create({
     width : 40,
     left : '40%',
     top : 29,
+    marginBottom: 0,
   },
+  textdebut: {
+    fontWeight: 'bold',
+    bottom : 460,
+    right: 110,
+    fontSize: 15,
+
+
+  },
+
   square: {
     backgroundColor: '#0FC2FB',
-    width: 330,
+    width: width * 0.9,
     height: 100,
     borderRadius: 15,
-    left: 22,
+    marginLeft: 20,
     bottom: 430,
 
   },
@@ -56,17 +71,17 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     borderRadius: 15,
     height: 35,
-    width: 130,
+    width: width * 0.35,
     justifyContent: 'center',
     left: 178,
     top: 34,
 
   },
   textbutton1: {
-    fontWeight : 'bold',
     color : 'black',
     left: 10,
-  }
+    fontSize: 15,
+  },
 });
 
 export default App;
