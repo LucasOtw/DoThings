@@ -11,6 +11,12 @@ function App(): React.JSX.Element {
         />
         <Text style={styles.text}>Good morning Lucas !</Text>
       </View>
+      <View style={styles.square}>
+        <Text style={styles.text1}>
+          Ma progression
+        </Text>
+
+      </View>
     </SafeAreaView>
   );
 }
@@ -37,6 +43,18 @@ const styles = StyleSheet.create({
     width : 40,
     left : '40%',
     top : 29,
+  },
+  square: {
+    backgroundColor: '#0FC2FB',
+    width: 300,
+    height: 300,
+    borderRadius: 15,
+    left: 39,
+    bottom: 100,
+  },
+  text1: {
+    color : 'white',
+    fontWeight : 'bold',
   }
 });
 
